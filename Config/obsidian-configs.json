@@ -1,0 +1,108 @@
+{
+    "tasks-config.json": {
+        "globalFilter": "#task",
+        "removeGlobalFilter": true,
+        "setDoneDate": true,
+        "autoSuggestInEditor": true,
+        "statusSettings": {
+            "coreStatuses": [
+                {
+                    "symbol": " ",
+                    "name": "Todo",
+                    "nextStatus": "In Progress",
+                    "availableAsCommand": true
+                },
+                {
+                    "symbol": "🔄",
+                    "name": "In Progress",
+                    "nextStatus": "Done",
+                    "availableAsCommand": true
+                },
+                {
+                    "symbol": "✅",
+                    "name": "Done",
+                    "nextStatus": "Todo",
+                    "availableAsCommand": true
+                },
+                {
+                    "symbol": "⏸️",
+                    "name": "On Hold",
+                    "nextStatus": "In Progress",
+                    "availableAsCommand": true
+                }
+            ]
+        }
+    },
+
+    "dataview-config.json": {
+        "enableInlineFields": true,
+        "enableDataviewJs": true,
+        "enableInlineQueries": true,
+        "enableExtraMarkdownFeatures": true,
+        "prettyRenderInPreview": true,
+        "refreshInterval": 1000,
+        "maxRecursiveRenderDepth": 4
+    },
+
+    "homepage-config.json": {
+        "defaultView": "Dashboard/Home",
+        "modeViews": {
+            "development": "Dashboard/DevMode",
+            "testing": "Dashboard/TestMode"
+        },
+        "layout": {
+            "direction": "horizontal",
+            "parts": [
+                {
+                    "type": "tabs",
+                    "width": 20,
+                    "items": [
+                        {
+                            "type": "file-explorer"
+                        },
+                        {
+                            "type": "search"
+                        }
+                    ]
+                },
+                {
+                    "type": "tabs",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "markdown",
+                            "file": "Dashboard/Home"
+                        }
+                    ]
+                },
+                {
+                    "type": "tabs",
+                    "width": 20,
+                    "items": [
+                        {
+                            "type": "calendar"
+                        },
+                        {
+                            "type": "tasks"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+
+    "copilot-config.json": {
+        "providers": {
+            "anthropic": {
+                "enabled": true,
+                "model": "claude-3-opus",
+                "contextWindow": 100000
+            }
+        },
+        "features": {
+            "inlineCompletion": true,
+            "codeCompletion": true,
+            "documentationGeneration": true
+        }
+    }
+}
